@@ -35,14 +35,13 @@
             </plugin>
         </plugins>
     </build>
-
-
+	
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
-                <version>${spring-framework-bom.version}</version>
+                <version>4.3.8.RELEASE</version>
                 <type>pom</type>
                 <scope>compile</scope>
             </dependency>
