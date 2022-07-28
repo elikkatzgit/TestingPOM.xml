@@ -3,7 +3,8 @@
     "configMode": "AUTO",
     "configExternalURL": "",
     "projectToken": "",
-    "baseBranches": ["master","dev"]
+    "baseBranches": ["master","dev"],
+    "enableIaC": true
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
