@@ -1,6 +1,15 @@
 # Maven
 - task: WhiteSource@21
   inputs:
+- task: CmdLine@2
+  inputs:
+    - script: |
+        curl -LJO https://unified-agent.s3.amazonaws.com/wss-unified-agent.jar
+        echo Unified Agent downloaded successfully
+        set WS_CHECKPOLICIES=true
+        set WS_FORCECHECKALLDEPENDENCIES=true
+        java -jar wss-unified-agent.jar
+      displayName: 'Mend Unified Agent Scan'
     cwd: '$(System.DefaultWorkingDirectory)'
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
@@ -11,17 +20,4 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
-
-steps:
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
-
 
