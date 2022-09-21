@@ -10,13 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  WS_CHECKPOLICIES=true: 'true'
+  WS_CHECKPOLICIES: 'true'
   WS_FORCECHECKALLDEPENDENCIES: 'true'
 
 steps:
 - script: |
    curl -LJO https://unified-agent.s3.amazonaws.com/wss-unified-agent.jar
    echo Unified Agent downloaded successfully
-   set
+   set | findstr WS_
    java -jar wss-unified-agent.jar -apiKey 1234567 
   displayName: 'Mend Unified Agent Scan'
