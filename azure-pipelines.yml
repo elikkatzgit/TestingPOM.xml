@@ -15,5 +15,6 @@ steps:
    echo Unified Agent downloaded successfully
    set WS_CHECKPOLICIES=true
    set WS_FORCECHECKALLDEPENDENCIES=true
-   java -jar wss-unified-agent.jar
+   set
+   java -jar wss-unified-agent.jar -apiKey 1234567 
   displayName: 'Mend Unified Agent Scan'
