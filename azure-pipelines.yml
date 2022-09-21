@@ -1,21 +1,19 @@
-# Maven
-task: CmdLine
-  inputs:
-    - script: |
-        curl -LJO https://unified-agent.s3.amazonaws.com/wss-unified-agent.jar
-        echo Unified Agent downloaded successfully
-        set WS_CHECKPOLICIES=true
-        set WS_FORCECHECKALLDEPENDENCIES=true
-        java -jar wss-unified-agent.jar
-      displayName: 'Mend Unified Agent Scan'
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
 
-# Build your Java project and run tests with Apache Maven.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/java
-
-- trigger:
-- master
+trigger:
+- main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: ubuntu-latest
 
+steps:
+- script: |
+   curl -LJO https://unified-agent.s3.amazonaws.com/wss-unified-agent.jar
+   echo Unified Agent downloaded successfully
+   set WS_CHECKPOLICIES=true
+   set WS_FORCECHECKALLDEPENDENCIES=true
+   java -jar wss-unified-agent.jar
+  displayName: 'Mend Unified Agent Scan'
