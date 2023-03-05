@@ -2,7 +2,7 @@
   "scanSettings": {
     "configMode": "AUTO",
     "configExternalURL": "",
-    "projectToken": "",": true
+    "projectToken": "",
     "baseBranches": ["master","dev"],
     "enableIaC": true,
     "enableLicenseViolations": true
