@@ -2,9 +2,10 @@
   "scanSettings": {
     "configMode": "AUTO",
     "configExternalURL": "",
-    "projectToken": "",
+    "projectToken": "",": true
     "baseBranches": ["master","dev"],
-    "enableIaC": true
+    "enableIaC": true,
+    "enableLicenseViolations": true
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
