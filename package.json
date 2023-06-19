@@ -62,7 +62,7 @@
     "url-search-params-polyfill": "6.0.0",
     "webpack": "4.35.0",
     "webpack-bundle-analyzer": "3.3.2",
-    "webpack-dev-server": "3.7.2",
+    "webpack-dev-server": "4.7.3",
     "whatwg-fetch": "3.0.0"
   }
 }
