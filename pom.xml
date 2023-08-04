@@ -18,7 +18,7 @@
         <jdk.version>1.8</jdk.version>
 
         <maven.compiler.plugin.version>3.6.1</maven.compiler.plugin.version>
-        <spring-framework-bom.version>4.3.8.RELEASE</spring-framework-bom.version>
+        <spring-framework-bom.version>4.3.30.RELEASE</spring-framework-bom.version>
     </properties>
 
     <build>
